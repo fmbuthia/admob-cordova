@@ -24,9 +24,10 @@
                 <param name="android-package" value="com.admob.cordova.plugin.AdmobAdPlugin"/>
             </feature>
         </config-file>
+        <framework src="com.google.android.gms:play-services-ads:+" />
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-           <meta-data  android:name="com.google.android.gms.version"   android:value="8115000"/>
-			<activity  android:name="com.google.android.gms.ads.AdActivity"  android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+			<activity  android:name="com.google.android.gms.ads.AdActivity"  android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+             android:theme="@android:style/Theme.Translucent" />
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
              <uses-permission android:name="android.permission.INTERNET"/>
